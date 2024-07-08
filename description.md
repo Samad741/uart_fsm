@@ -1,4 +1,4 @@
-b<Description:>
+<Description:>b
 	Here, 8 bit data input and for num_data it will vary from 5 to 8 bit. Parity bit will be 0 if the data is already even parity means there will be an even number of 1’s and parity bit will be 1 if there is odd number of 1’s ib data bit. Stop-2 bit wil define if the count number of stop bit will be 1 or 2. If stop_2 == ‘0 then one stop bit will be used and if stop_2 == ‘1, we have to use 2 stop bit. When the valid and ready signalis 1 at a positive clock edge then data will be captured. 
 
 
