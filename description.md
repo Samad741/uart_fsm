@@ -11,3 +11,4 @@ Parity Generator: It is basically a XOR get setup which will give 1 for odd numb
 PISO: Parallel Input Serial Output will take 8 bit input data in parallel and will give serial single data output.
 
 MUX: A 4x1 mux will be used to pass the start bit, data bit, parity bit and stop bit sequentially.
+<img src="https://github.com/Samad741/uart_fsm/blob/main/UART_TX_architecture.svg">
