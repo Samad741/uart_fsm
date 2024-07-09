@@ -1,6 +1,0 @@
-0.7
-2020.2
-May 22 2024
-19:03:11
-C:/Users/DSi/Desktop/samad/uart_fsm/inc/verif_pkg.sv,1720519207,verilog,C:/Users/DSi/Desktop/samad/uart_fsm/tb/uart_top_tb.sv,,,uart_intf;verif_pkg,,,,,,,,
-C:/Users/DSi/Desktop/samad/uart_fsm/tb/uart_top_tb.sv,1720525352,systemVerilog,C:/Users/DSi/Desktop/samad/uart_fsm/inc/verif_pkg.sv,,C:/Users/DSi/Desktop/samad/uart_fsm/inc/verif_pkg.sv,$unit_uart_top_tb_sv;uart_top_tb,,,,,,,,
