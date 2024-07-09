@@ -14,7 +14,7 @@ module fsm(
   output logic [1:0] sel       // Selection signal
   );
 
-  logic [2:0] cntr = '0;       // Counter for data bits
+  logic [2:0] cntr;            // Counter for data bits
   logic [2:0] pstate, nstate;  // Present and next state declaration
   
   // State enumeration
@@ -40,12 +40,12 @@ module fsm(
         START: nstate = DATA;
         DATA: if ((cntr == {1'b1, num_data}) && parity) 
                       nstate = PARITY;
-                    else if ((cntr == {1'b1, num_data}) && !parity) 
+              else if ((cntr == {1'b1, num_data}) && !parity) 
                       nstate = STOP_1;
-                    else begin
+              else begin
                       cntr += 1;
                       nstate = DATA;
-                    end
+              end
         PARITY: nstate = STOP_1;
         STOP_1: nstate = stop_2 ? STOP_2 : IDLE;
         STOP_2: nstate = IDLE;
@@ -105,6 +105,7 @@ module fsm(
   ////// Present State Register ////////
   always_ff @(posedge clk or negedge arst_n) begin: PSR
     if (arst_n == 0) begin
+      cntr <= '0;
       pstate <= IDLE;   // Reset to IDLE state
     end else begin
       pstate <= nstate;       // Update to next state
