@@ -1,0 +1,13 @@
+# vsim tb_uart -c -do "run -all; quit;" 
+# Start time: 15:38:21 on Jul 09,2024
+# Loading sv_std.std
+# Loading work.uart_intf
+# Loading work.verif_pkg
+# Loading work.tb_uart_sv_unit
+# Loading work.tb_uart
+# run -all
+# Time: 0 | TX: 0 | RX: x
+# ** Note: $finish    : tb_uart.sv(47)
+#    Time: 1 ns  Iteration: 0  Instance: /tb_uart
+# End time: 15:38:22 on Jul 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

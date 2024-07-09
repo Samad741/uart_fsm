@@ -23,17 +23,19 @@ module reg_piso(
   end
   
   always_comb begin
-    case(d_reg_sel) // select the output bit based on d_reg_sel
-      'b000:   data_out = register[0]; // output bit 0 of register
-      'b001:   data_out = register[1]; // output bit 1 of register
-      'b010:   data_out = register[2]; // output bit 2 of register
-      'b011:   data_out = register[3]; // output bit 3 of register
-      'b100:   data_out = register[4]; // output bit 4 of register
-      'b101:   data_out = register[5]; // output bit 5 of register
-      'b110:   data_out = register[6]; // output bit 6 of register
-      'b111:   data_out = register[7]; // output bit 7 of register
-      default: data_out = '0; // default case 
-    endcase
+    if(d_reg_en) begin
+      case(d_reg_sel) // select the output bit based on d_reg_sel
+        'b000:   data_out = register[0]; // output bit 0 of register
+        'b001:   data_out = register[1]; // output bit 1 of register
+        'b010:   data_out = register[2]; // output bit 2 of register
+        'b011:   data_out = register[3]; // output bit 3 of register
+        'b100:   data_out = register[4]; // output bit 4 of register
+        'b101:   data_out = register[5]; // output bit 5 of register
+        'b110:   data_out = register[6]; // output bit 6 of register
+        'b111:   data_out = register[7]; // output bit 7 of register
+        default: data_out = '0; // default case 
+      endcase
+    end
   end
 
 endmodule
